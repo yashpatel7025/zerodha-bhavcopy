@@ -32,7 +32,6 @@ def convert_csv_to_list(csv_file):
 def get_redis_data(csv_file, name):
 	cache_name = csv_file
 	if(cache_name in cache):
-		print("found in redis")
 		data = cache.get(cache_name)
 		data= list(filter(lambda m: True if m["name"].lower().startswith(name) else False, data))
 		return data
@@ -69,7 +68,6 @@ def download_and_save_data():
 				'X-Requested-With': 'XMLHttpRequest'
 		}
 		response = requests.get(zip_url,headers=header, stream=True)
-		print(zip_url)
 		if response.status_code == 200:
 			files = zipfile.ZipFile(BytesIO(response.content))
 			files.extractall("./zips/")
@@ -89,11 +87,7 @@ def get_bhavcopy(request):
 	"zip_url" : zip_url,
 	"date" : date
 	}
-	delete()
 
-	return render(request, 'csv.html', context=context)
-
-def delete():
-	cache.delete("./zips/EQ120521.CSV")
+	return render(request, 'bhavcopy.html', context=context)
 
 

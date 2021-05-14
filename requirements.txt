@@ -1,7 +1,6 @@
 django
 django-redis
 django-crispy-forms
-django-bootstrap-datepicker-plus
 django_forms_bootstrap
 django-bootstrap4
 django-extensions
