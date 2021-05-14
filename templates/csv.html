@@ -1,0 +1,146 @@
+{% load static %}
+<html>
+<head>
+  <title></title>
+
+<!--===============================================================================================-->  
+<link href="{% static '/table3/images/icons/favicon.ico' %}" rel="icon" type="image/png">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{% static '/table3/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{% static '/table3/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="{% static '/table3/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="{% static '/table3/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="{% static '/table3/vendor/perfect-scrollbar/perfect-scrollbar.css' %}">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="{% static '/table3/css/util.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static '/table3/css/main.css' %}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <link rel="stylesheet" href="{% static 'styles3.css' %}">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+<!--===============================================================================================-->
+ 
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+  <ul class="navbar-nav ml-auto">
+
+
+     
+                <a class="nav-item nav-link" href="#">Login</a>
+                <a class="btn btn-outline-success" href="#">Register</a>
+        
+ </ul>
+</div>
+</nav>
+
+{% if messages %}
+  {% for message in messages %}
+    <div id="messages" class="container">
+      <div class="alert alert-{{ message.tags }} alert-dismissible text-center" role="alert">
+        <button type="button" class="close" data-dismiss="alert">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        {{ message }}
+      </div>
+    </div>
+  {% endfor %}
+{% endif %}
+<br>
+
+<div class="limiter">
+    <div class="container-table100">
+      <div class="wrap-table100">
+        <div class = "container">
+        <center class="table100"> <div class="badge badge-pill badge-dark " align="center"> <h2>&nbsp;&nbsp;BSE Bhavcopy(Equity) for date {{date}}&nbsp;
+        <span><a href="{{zip_url}}">Download</a></span> </center>
+          <center><h3><small class="badge badge-pill badge-success">Data will be updated everyday at 6pm</small></h3></center>
+        </div>
+          <!-- The form -->
+<form class="example" onsubmit="return false;">
+  <input type="text" placeholder="reliance" id ="search_box" name="search">
+  <button id="search_btn" ><i class="fa fa-search"></i></button>
+</form>
+
+        <br><br>
+          <table id="mytable">
+            <thead>
+              <tr class="table100-head">
+                <th class="column1">Code</th>
+                <th class="column1">Name</th>
+                <th class="column1">Open</th>
+                <th class="column1">High</th>
+                <th class="column1">Low</th>
+                 <th class="column1">Close</th>
+              </tr>
+            </thead>
+             {% for row in data %}
+            <tbody>
+                <tr>
+                  <td class="column1">{{row.code}}</td>
+                  <td class="column1">{{row.name}}</td>
+                  <td class="column1">{{row.open}}</td>
+                  <td class="column1">{{row.high}}</td>
+                  <td class="column1">{{row.low}}</td>
+                  <td class="column1">{{row.close}}</td>
+                </tr>
+                
+            </tbody>
+             {% endfor %}
+
+
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+  <script>
+$(document).ready(function() {
+
+   function RefreshTable() {
+    var h = document.getElementById("search_box");
+       $( "#mytable" ).load( "{% url 'bhavcopy' %}"+"?name=" + encodeURIComponent(h.value) + " #mytable" );
+   }
+
+   $("#search_btn").on("click", RefreshTable);
+
+   // OR CAN THIS WAY
+   //
+   // $("#refresh-btn").on("click", function() {
+   //    $( "#mytable" ).load( "your-current-page.html #mytable" );
+   // });
+
+
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  
+ <script src='/static/cd.js'></script>
+<!--===============================================================================================-->  
+  <script src="/static/table3/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+  <script src="/static/table3/vendor/bootstrap/js/popper.js"></script>
+  <script src="/static/table3/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+  <script src="/static/table3/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+  <script src="/static/table3/js/main.js"></script>
+
+
+
+       
+
+</body>
+</html>
