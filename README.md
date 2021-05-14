@@ -1,6 +1,6 @@
 # zerodha-bhavcopy
 
-access web-app from -> http://yashp-zerodha-bhavcopy.centralindia.cloudapp.azure.com/
+access webapp from -> http://yashp-zerodha-bhavcopy.centralindia.cloudapp.azure.com/
 
 ## features
 
@@ -14,3 +14,4 @@ access web-app from -> http://yashp-zerodha-bhavcopy.centralindia.cloudapp.azure
 
 - used HTML/CSS/Bootstrap for frontend instead of VueJS
 - celery framework is used for background task to download bhavcopy everyday at 6pm
+- webapp is deployed on *Microsoft Azure Cloud*
