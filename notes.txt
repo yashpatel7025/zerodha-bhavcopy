@@ -2,11 +2,16 @@
 - make sure celery is present inside ve/bin/ after installing-> used by config file-> some time it is not get installed there-> use python3 in ve-> 
 virtualenv -p python3 ve
 - for celery ->https://medium.com/swlh/asynchronous-task-with-django-celery-redis-and-production-using-supervisor-ef920725da03
-- sudo supervisorctl reread
-- sudo supervisorctl update
-- sudo supervisorctl
-- sudo supervisorctl status
+	- sudo supervisorctl reread
+	- sudo supervisorctl update
+	- sudo supervisorctl
+	- sudo supervisorctl status
 see cache keys
-- redis-cli -n 1  
-- keys *
-- to delet-> DEL "rdb_:1:./zips/EQ140521.CSV"
+	- redis-cli -n 1  
+	- keys *
+	- to delet-> DEL "rdb_:1:./zips/EQ140521.CSV"
+- detach-> ctrl a +ctl d
+- attach->screen -r
+- sudo python3 manage.py runserver 0.0.0.0:80 --insecure
+	- insecure -> to serve statc files when debug=false
+	- sudo to allow 80 port
