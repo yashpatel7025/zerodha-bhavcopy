@@ -15,3 +15,44 @@ access webapp from -> http://yashp-zerodha-bhavcopy.centralindia.cloudapp.azure.
 - used HTML/CSS/Bootstrap for frontend instead of VueJS
 - celery framework is used for background task to download bhavcopy everyday at 6pm
 - webapp is deployed on *Microsoft Azure Cloud*
+
+## Setup
+
+#### clone this repository by 
+
+- ```bash
+  git clone <repo link>
+  ```
+- Go to the project root directory
+  ```bash
+  cd Ufaber Assignement
+  ```
+- Create Virtualenv and activate it
+  ```bash
+  virtualenv ve 
+  source ve/bin/activate
+  ```
+- Install dependency packages
+  ```bash
+  pip3 install -r requirements.txt
+  ```
+ - Install redis-server
+  ```bash
+  sudo apt install redis-server
+  ```
+ - run django makemigrations command
+  ```bash
+  python3 manage.py makemigrations
+  ```
+  - run django migrate command
+  ```bash
+  python3 manage.py migrate
+  ```
+#### To run the server
+-   ```bash
+    python manage.py runserver
+    ```
+- configure celery beat and worker by refering this 
+  https://medium.com/swlh/asynchronous-task-with-django-celery-redis-and-production-using-supervisor-ef920725da03
+  
+- access the webapp from http://127.0.0.1:8000/
