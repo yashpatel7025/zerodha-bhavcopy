@@ -1,0 +1,11 @@
+- give write access to ./zips-> sudo chmod -R 777 zips
+- make sure celery is present inside ve/bin/ after installing-> used by config file-> some time it is not get installed there-> use python3 in ve-> 
+virtualenv -p python3 ve
+- for celery ->https://medium.com/swlh/asynchronous-task-with-django-celery-redis-and-production-using-supervisor-ef920725da03
+- sudo supervisorctl reread
+- sudo supervisorctl update
+- sudo supervisorctl
+- sudo supervisorctl status
+see cache keys
+- redis-cli -n 1  
+- keys *
