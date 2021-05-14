@@ -14,13 +14,13 @@ access webapp from -> http://yashp-zerodha-bhavcopy.centralindia.cloudapp.azure.
 
 - used HTML/CSS/Bootstrap for frontend instead of VueJS
 - celery framework is used for background task to download bhavcopy everyday at 6pm
-- webapp is deployed on *Microsoft Azure Cloud*
+- webapp is deployed on Microsoft Azure Cloud
 
 ## Setup
 
 
 - clone this repository by 
-- ```bash
+ ```bash
   git clone <repo link>
   ```
 - Go to the project root directory
