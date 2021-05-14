@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns = [
   
-    path('bhavcopy/', views.get_bhavcopy, name='bhavcopy'),
+    path('', views.get_bhavcopy, name='bhavcopy'),
   
 
 ] 

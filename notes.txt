@@ -9,3 +9,4 @@ virtualenv -p python3 ve
 see cache keys
 - redis-cli -n 1  
 - keys *
+- to delet-> DEL "rdb_:1:./zips/EQ140521.CSV"
