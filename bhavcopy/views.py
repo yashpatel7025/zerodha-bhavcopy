@@ -78,7 +78,7 @@ def download_and_save_data():
 def get_bhavcopy(request):
 	name= request.GET.get("name")
 	if not name:
-		name="reliance"
+		name="yash"
 
 	data, zip_url, date = get_data(name.lower())
 
