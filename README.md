@@ -61,3 +61,9 @@ access webapp from -> http://yashp-zerodha-bhavcopy.centralindia.cloudapp.azure.
 ### Contact for any difficulties accessing the webapp or related to setup
 
 - email:- yashpatel7025@gmail.com
+
+### Demo
+
+<img src="./demo-images/1.png" width="1000" height="430">
+---
+<img src="./demo-images/2.png" width="1000" height="430">
