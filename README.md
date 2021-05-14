@@ -20,7 +20,7 @@ access webapp from -> http://yashp-zerodha-bhavcopy.centralindia.cloudapp.azure.
 
 
 - clone this repository by 
- ```bash
+  ```bash
   git clone <repo link>
   ```
 - Go to the project root directory
