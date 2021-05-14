@@ -18,14 +18,14 @@ access webapp from -> http://yashp-zerodha-bhavcopy.centralindia.cloudapp.azure.
 
 ## Setup
 
-#### clone this repository by 
 
+- clone this repository by 
 - ```bash
   git clone <repo link>
   ```
 - Go to the project root directory
   ```bash
-  cd Ufaber Assignement
+  cd zerodha-bhavcopy
   ```
 - Create Virtualenv and activate it
   ```bash
@@ -36,15 +36,15 @@ access webapp from -> http://yashp-zerodha-bhavcopy.centralindia.cloudapp.azure.
   ```bash
   pip3 install -r requirements.txt
   ```
- - Install redis-server
+- Install redis-server
   ```bash
   sudo apt install redis-server
   ```
- - run django makemigrations command
+- run django makemigrations command
   ```bash
   python3 manage.py makemigrations
   ```
-  - run django migrate command
+- run django migrate command
   ```bash
   python3 manage.py migrate
   ```
